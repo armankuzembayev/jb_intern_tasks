@@ -1,0 +1,8 @@
+prefix=/home/arman/jetBrains_ws/devel
+
+Name: task2
+Description: Description of task2
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/arman/jetBrains_ws/devel/lib 
+Requires: 
