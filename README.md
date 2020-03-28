@@ -8,7 +8,6 @@
 In terminal window:
 ```
 rosrun jb_intern_tasks runner_task1.py 
-
 ```
 In other terminal window:
 ```
@@ -21,7 +20,6 @@ rosrun jb_intern_tasks observer_task1.py
 In terminal window:
 ```
 rosrun jb_intern_tasks runner_task2 
-
 ```
 In other terminal window:
 ```
@@ -38,7 +36,6 @@ roslaunch jb_intern_tasks rviz.launch
 In terminal window:
 ```
 rosrun jb_intern_tasks runner_task3 
-
 ```
 In other terminal window:
 ```
@@ -54,20 +51,14 @@ roslaunch jb_intern_tasks rviz.launch
 In terminal window:
 ```
 rosrun jb_intern_tasks runner_task4.py 
-
 ```
 In other terminal window:
 ```
 rosrun jb_intern_tasks observer_task4.py
 ```
-In other terminal window (for adding new runner):
+In other terminal window (for adding or removing new runner):
 ```
 rosservice call /add_runner 
-
-```
-for removing runner:
-```
-rosservice call /remove_runner [runner_id] 
-
+rosservice call /remove_runner [runner_number] (rosservice call /remove_runner 1)
 ```
 
