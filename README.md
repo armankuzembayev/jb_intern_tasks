@@ -14,7 +14,6 @@ source devel/setup.bash
 
 
 ## Task 1
-
 Map is located in task1 folder. The dataset (bag file) was taken from http://projects.csail.mit.edu/stata/downloads.php website (2011-01-24-06-18-27.bag)
 ---
 ## Task 2
@@ -22,9 +21,9 @@ Map is located in task1 folder. The dataset (bag file) was taken from http://pro
 ### Task 2.1
 
 ### Description
-Runner (runner_task1 node) is moving with some trajectory and each time publishes its coordinates(x, y, z) via '/point' topic (geometry_msgs/Point message)
+Runner (runner_task1 node) moves with some trajectory and each time publishes its coordinates (x, y, z) via '/point' topic (geometry_msgs/Point message).
 
-Observer (observer_task1 node) is listening to '/point' topic and prints the result to console.
+Observer (observer_task1 node) listens to the '/point' topic and prints the results to the console.
 
 ### Usage
 In terminal window:
