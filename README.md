@@ -46,21 +46,31 @@ Observer (observer_task2 node) listens to the '/point' topic and saves all posit
 ### Usage
 In terminal window:
 ```
+roslaunch jb_intern_tasks rviz.launch 
+```
+In other terminal window:
+```
 rosrun jb_intern_tasks runner_task2 
 ```
 In other terminal window:
 ```
 rosrun jb_intern_tasks observer_task2 
 ```
-In other terminal window:
-```
-roslaunch jb_intern_tasks rviz.launch 
-```
 
 ### Task 2.3
 
+### Description
+Runner (runner_task2 node) moves with some trajectory that is closed to a loop and each time publishes its path via '/path' topic (nav_msgs/Path message), but with some error that is normally distributed and not greater than 5%.
+
+Observer (observer_task2 node) listens to the '/path' topic and saves the sum of all positions of the runner along the path and stores the number of received messages. After that it calculates the simple smoothing average for obtaining smoothed path. Then it publishes the smoothed trajectory of the runner through 'visualization_marker' topic (visualization_msgs/Marker message). After that it is possible to observe the path of the runner in rviz.
+
+
 ### Usage
 In terminal window:
+```
+roslaunch jb_intern_tasks rviz.launch 
+```
+In other terminal window:
 ```
 rosrun jb_intern_tasks runner_task3 
 ```
@@ -68,10 +78,7 @@ In other terminal window:
 ```
 rosrun jb_intern_tasks observer_task3 
 ```
-In other terminal window:
-```
-roslaunch jb_intern_tasks rviz.launch 
-```
+
 ### Task 2.4
 
 ### Usage
