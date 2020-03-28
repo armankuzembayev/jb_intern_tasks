@@ -2,29 +2,26 @@
 #include "geometry_msgs/Point.h"
 #include <math.h> 
 
-// Equation of a loop: x^2 + y^2 = 5
-//y = sqrt(5 - x^2)
-
 class Runner{
 public:
   Runner();
   
 private:
-  void loop();
+  void loop(); // main loop for recalculating the position; path equation: x^2 + y^2 = 9
   ros::NodeHandle n_;
   ros::Publisher point_pub;
   geometry_msgs::Point point;
-  bool direction;
+  bool direction; // path direction
  
 }; // End of class
 
 Runner::Runner(){
-    point_pub = n_.advertise<geometry_msgs::Point>("point", 1000);
+    point_pub = n_.advertise<geometry_msgs::Point>("point", 10);
     loop();
 }
 
 void Runner::loop(){
-    ros::Rate loop_rate(100);
+    ros::Rate loop_rate(100); // 100hz
     float x = -3.0;
     float y = 0.0;
     direction = true;

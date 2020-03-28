@@ -10,7 +10,7 @@ class Observer{
 public:
   Observer();
 private:
-  void chatterCallback(const nav_msgs::Path::ConstPtr& path); 
+  void chatterCallback(const nav_msgs::Path::ConstPtr& path); // callback function
   ros::NodeHandle n_;
   ros::Publisher path_pub;
   ros::Subscriber sub_; 
@@ -25,6 +25,7 @@ Observer::Observer() : counter(1){
 }
 
 void Observer::chatterCallback(const nav_msgs::Path::ConstPtr& path){
+    // Initialization
     visualization_msgs::Marker points, line_strip;
     points.header.frame_id = line_strip.header.frame_id = "/my_frame";
     points.header.stamp = line_strip.header.stamp = ros::Time::now();
@@ -53,7 +54,8 @@ void Observer::chatterCallback(const nav_msgs::Path::ConstPtr& path){
 	    vOut[i].y = v[i].y / counter;	
 	}
 
-    }	
+    }
+    // Publishing marker	
     line_strip.points = vOut;	  	
     path_pub.publish(line_strip);
     counter++;

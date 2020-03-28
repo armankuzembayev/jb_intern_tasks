@@ -12,7 +12,7 @@ public:
 private:
   float calculate_error(float mean); // generate normally distributed value with error less than 5% of the mean
   geometry_msgs::PoseStamped get_pose(float x, float y); // used to initialize geometry_msgs::PoseStamped message and plug in values
-  void loop(); // main loop for recalculating the path
+  void loop(); // main loop for recalculating the path; path equation: x^2 + y^2 = 9
   ros::NodeHandle n_;
   ros::Publisher path_pub;
   geometry_msgs::Point point;
@@ -54,7 +54,7 @@ geometry_msgs::PoseStamped Runner::get_pose(float x, float y){
 }
 
 void Runner::loop(){
-    ros::Rate loop_rate(5);
+    ros::Rate loop_rate(5); // 5hz
     while (ros::ok()){
 	path.header.frame_id = "/my_path";
 	path.header.stamp = ros::Time::now();

@@ -7,7 +7,7 @@ public:
   Observer();
 
 private:
-  void chatterCallback(const geometry_msgs::Point& point);
+  void chatterCallback(const geometry_msgs::Point& point); // callback function
   ros::NodeHandle n_;
   ros::Publisher path_pub;
   ros::Subscriber sub_; 
@@ -15,11 +15,12 @@ private:
 }; // End of Class
 
 Observer::Observer(){
-  sub_ = n_.subscribe("point", 1000, &Observer::chatterCallback, this);
+  sub_ = n_.subscribe("point", 10, &Observer::chatterCallback, this);
   path_pub = n_.advertise<visualization_msgs::Marker>("visualization_marker", 10);
 }
 
 void Observer::chatterCallback(const geometry_msgs::Point& point){
+  // Initialization
   visualization_msgs::Marker points, line_strip, line_list;
   points.header.frame_id = line_strip.header.frame_id = line_list.header.frame_id = "/my_frame";
   points.header.stamp = line_strip.header.stamp = line_list.header.stamp = ros::Time::now();
@@ -35,6 +36,7 @@ void Observer::chatterCallback(const geometry_msgs::Point& point){
   line_strip.color.r = 1.0;
   line_strip.color.a = 1.0;
 
+  // Publishing marker
   v.push_back(point);
   line_strip.points = v;	  	
   path_pub.publish(line_strip);

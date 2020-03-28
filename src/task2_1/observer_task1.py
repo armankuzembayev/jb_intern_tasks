@@ -8,7 +8,7 @@ class Observer():
         self.sub = rospy.Subscriber('point', Point, self.callback)
 
     def callback(self, point):
-        rospy.loginfo("The runner's position is: x = [%f], y = [%f], z = [%f]", point.x, point.y, point.z)
+        rospy.loginfo("The runner's position is: x = [%f], y = [%f], z = [%f]", point.x, point.y, point.z) # printing position
 
 
 if __name__ == '__main__':

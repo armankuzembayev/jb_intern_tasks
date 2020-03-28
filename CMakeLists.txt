@@ -122,10 +122,10 @@ include
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(runner_task2 src/task2/runner_task2.cpp)
-add_executable(observer_task2 src/task2/observer_task2.cpp)
-add_executable(runner_task3 src/task3/runner_task3.cpp)
-add_executable(observer_task3 src/task3/observer_task3.cpp)
+add_executable(runner_task2 src/task2_2/runner_task2.cpp)
+add_executable(observer_task2 src/task2_2/observer_task2.cpp)
+add_executable(runner_task3 src/task2_3/runner_task3.cpp)
+add_executable(observer_task3 src/task2_3/observer_task3.cpp)
 
 target_link_libraries(runner_task2 ${catkin_LIBRARIES})
 target_link_libraries(observer_task2 ${catkin_LIBRARIES})

@@ -11,9 +11,9 @@ class Observer():
     def callback(self, poses):
         length = len(poses.poses)
         for i in range(length):
-            #rospy.loginfo("The # %d runner's position is: x = [%f], y = [%f], z = [%f]", i + 1, poses.poses[i].position.x, poses.poses[i].position.y, poses.poses[i].position.z)
-            print("The # {} runner's position is: x = {}, y = {}, z = {}".format(i + 1, poses.poses[i].position.x, poses.poses[i].position.y, poses.poses[i].position.z))
+            rospy.loginfo("The # %d runner's position is: x = [%f], y = [%f], z = [%f]", i + 1, poses.poses[i].position.x, poses.poses[i].position.y, poses.poses[i].position.z) # printing runner's position
 	print('')
+
 if __name__ == '__main__':
     rospy.init_node('observer_task4')
     Observer()

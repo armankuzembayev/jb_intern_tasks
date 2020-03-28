@@ -15,8 +15,8 @@ class Runner:
         while not rospy.is_shutdown():
             point = Point()
             point.x = self.x
-            point.y = np.sin(self.x * np.pi / 180)
-            point.z = np.sin(self.x * np.pi / 180) + np.cos(point.y * np.pi / 180)
+            point.y = np.sin(self.x * np.pi / 180) # equation for calculating y
+            point.z = np.sin(self.x * np.pi / 180) + np.cos(point.y * np.pi / 180) # equation for calculating z
             self.pub.publish(point)
             self.x += 1
             self.rate.sleep()
