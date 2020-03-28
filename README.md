@@ -6,7 +6,7 @@ Clone a repository to your workspace/src folder:
 ```
 git clone https://github.com/armankuzembayev/jb_intern_tasks.git 
 ```
-In your workspace folder:
+In terminal go to your workspace folder:
 ```
 catkin_make
 source devel/setup.bash
@@ -82,7 +82,7 @@ rosrun jb_intern_tasks observer_task3
 ### Task 2.4
 
 ### Description
-Runner(s) (runner_task1 node) move(s) with some trajectory and each time publishes the coordinates (x, y, z) of each runner via '/coordinates' topic (geometry_msgs/PoseArray message). It is always possible to increase the number of runners by using standard service std_srvs/Trigger service, which adds new Runner object. Moreover, it is also possible to remove the runner with some runner_id by using custom service ().
+Runner(s) (runner_task1 node) move(s) with some trajectory and each time publishes the coordinates (x, y, z) of each runner via '/coordinates' topic (geometry_msgs/PoseArray message). It is always possible to increase the number of runners by using standard service std_srvs/Trigger service, which adds new Runner object. Moreover, it is also possible to remove the runner with some runner_id by using custom service (jb_intern_tasks/remove_runner service).
 
 Observer (observer_task1 node) listens to the '/coordinates' topic and prints the coordinates of all runners to the console.
 
