@@ -20,7 +20,7 @@ private:
 }; // End of Class
 
 Observer::Observer() : counter(1){
-    sub_ = n_.subscribe("path", 100, &Observer::chatterCallback, this);
+    sub_ = n_.subscribe("path", 10, &Observer::chatterCallback, this);
     path_pub = n_.advertise<visualization_msgs::Marker>("visualization_marker", 10);	
 }
 

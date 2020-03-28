@@ -2,7 +2,7 @@
 
 ## Instructions
 
-Clone repository to your workspace/src folder:
+Clone a repository to your workspace/src folder:
 ```
 git clone https://github.com/armankuzembayev/jb_intern_tasks.git 
 ```
@@ -15,7 +15,7 @@ source devel/setup.bash
 
 ## Task 1
 ---
-Map is located in task1 folder. The dataset (bag file) was taken from http://projects.csail.mit.edu/stata/downloads.php website (2011-01-24-06-18-27.bag)
+Map is located in the task1 folder. The dataset (bag file) was taken from http://projects.csail.mit.edu/stata/downloads.php website (2011-01-24-06-18-27.bag).
 
 ## Task 2
 ---

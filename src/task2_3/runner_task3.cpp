@@ -24,7 +24,7 @@ private:
 }; // End of class
 
 Runner::Runner(){
-    path_pub = n_.advertise<nav_msgs::Path>("path", 100);
+    path_pub = n_.advertise<nav_msgs::Path>("path", 10);
     loop();
 }
 
@@ -63,14 +63,14 @@ void Runner::loop(){
 	y_with_error = 0.0;
 	x = -3.0;
 	while (x <= 3){ 
-	  float y = sqrt(9 - pow(x, 2));
+	  y = sqrt(9 - pow(x, 2));
 	  pose = get_pose(x, y);
 	  v.push_back(pose);
 	  x += 0.01;
 	}
 	x = 3.0;
 	while (x >= -3){
-	  float y = sqrt(9 - pow(x, 2)) * (-1);
+	  y = sqrt(9 - pow(x, 2)) * (-1);
 	  pose = get_pose(x, y);
 	  v.push_back(pose);
 	  x -= 0.01;

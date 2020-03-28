@@ -5,7 +5,7 @@ import numpy as np
 from geometry_msgs.msg import Pose
 from geometry_msgs.msg import PoseArray  
 from std_srvs.srv import Trigger
-from jb.srv import remove_runner # service for removing the runner
+from jb_intern_tasks.srv import remove_runner # service for removing the runner
 
 class Runner:
     def __init__(self, c):

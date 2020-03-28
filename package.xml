@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>jb</name>
+  <name>jb_intern_tasks</name>
   <version>0.0.0</version>
-  <description>The jb package</description>
+  <description>The jb_intern_tasks package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
@@ -19,7 +19,7 @@
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/jb</url> -->
+  <!-- <url type="website">http://wiki.ros.org/jb_intern_tasks</url> -->
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
